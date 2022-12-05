@@ -1,0 +1,45 @@
+Apigee:
+
+
+Source: https://www.youtube.com/watch?v=2bDeH3C23Hc&list=PLIXjuPlujxxz3UXTytamxUB8EGzbaqAqQ
+====================================================================
+Apigee Proxy creation:
+1. click on create proxy
+2. enter required details
+	a. select type
+	b. proxy name
+	c. base path
+	d. Existing/actual cloud URL
+3. select security type
+	a. None/API Key/oauth
+4. virtual host
+	a. secure/default -> most select secure/default
+5. Build
+	a. test/prod
+6. click on next.
+7. We get an apigee/proxy url.(we can use it as per our need)
+
+-> Proxy window contains overview, develop, Trace, Performance tabs.
+-> Click on develop tab to modify
+-> you can deploy/undeploy from deployment button.
+======================================================================
+Adding policy to proxy:
+1. Open created proxy
+2. click on develop tab
+3. select preflow from list 
+	a. click on + button which shows list of policies
+	b. For example select quota policy
+	c. configure/change quota to 3 times in 1 minute.
+		<quota name="quota-1">
+			<flow count="3"/>
+			<interval>1<interval/>
+			<TimeUnit>minute<TimeUnit/>
+		</quota>
+	d. save
+4. deploy again
+5. hit the apigee/proxy url to test policy.
+======================================================================
+
+
+	
+ 
