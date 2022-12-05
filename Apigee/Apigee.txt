@@ -1,4 +1,5 @@
-Apigee:
+Apigee: Apigee is a api gateway which secure the application.
+		To prevent the unauthorised access.		
 
 
 Official Documentation : docs.apigee.com
