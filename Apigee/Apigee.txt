@@ -1,6 +1,9 @@
 Apigee:
 
 
+Official Documentation : docs.apigee.com
+Certification : academy.apigee.com
+
 Source: https://www.youtube.com/watch?v=2bDeH3C23Hc&list=PLIXjuPlujxxz3UXTytamxUB8EGzbaqAqQ
 ====================================================================
 Apigee Proxy creation:
@@ -76,6 +79,48 @@ NOTE:
 	
 Task: Adding API key to proxy:
 Solution: Use API Key as query parameter to hit the apigee/proxy url.
+=========================================================================
+About Trace Tab :
+
+1. Goto API Proxies
+2. Select the proxy
+3. click on trace tab.
+	a. click on start new trace session.
+	b. hit the url with required parameters
+	c. we can see the request detail with all properties in trace tab.
+NOTE:
+	1. Trace can show upto 20 transactions/requests.
+	2. If you want log, log message policy need to be added.
+=========================================================================
+Publish API to portal:
+
+1. APigee provide unique portal to Admin to publish their API's.4
+2. Select Your portal
+	a. various sections available for modifying the page.
+	b. Under API's , click on +products.
+	c. Select your product.
+	d. Select spec source/open APi/swagger.
+	e. Click on save.
+3. Other consumers can create account in our dedication portal.
+	a. Can consume our API's.
+	b. New unique API Key & secret will be provided to consumer to consume products.
+====================================================================================
+API Analytics:
+
+1. It is mainly used to track API's
+2. Analytics tabs has following details about proxies/products/Apps.
+	a. API proxy performance
+	b. Cache performance
+	c. Developer engagement
+	d. Geo map
+	e. Latency analysis
+	f. Traffic
+	g. custom reports
+====================================================================================	
+
+
+
+
 
 
 
