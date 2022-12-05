@@ -39,6 +39,44 @@ Adding policy to proxy:
 4. deploy again
 5. hit the apigee/proxy url to test policy.
 ======================================================================
+Adding API key to proxy:
+1. Open created proxy
+2. Open develop tabs
+3. Select preflow from list 
+	a. click on + button which shows list of policies
+	b. select Verify APi key policy
+	c. click save.
+4. Wrap proxy into API Product
+5. API Product is a way to expose the API's to consuming developers
+6. Click on publish 
+	a. Goto API products
+	b. click on +product
+	c. Name the product
+	d. Include our proxy under API proxies section.
+	e. click save
+NOTE: We can add custom attributes under custom section, If needed.
+7. Click on publish
+	a. Goto developers section
+	b. click on +developers
+	c. Enter details of the developer
+	d. click on create
+8. Create Developer App which can be authorised for the product
+9. Click on publish
+	a. Goto Apps
+	b. Click on +apps
+	c. Give details
+	d. select products under product section
+	e. click on save
+10. API Key & Secret of App is available inside the APP.
+
+NOTE:
+	1. Proxies can be individual.
+	2. In one product multiple proxies can mapped/configured/grouped.
+	3. In one App multiple products can be mapped/configured/grouped.
+	
+Task: Adding API key to proxy:
+Solution: Use API Key as query parameter to hit the apigee/proxy url.
+
 
 
 	
