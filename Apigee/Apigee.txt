@@ -16,7 +16,7 @@ Apigee Proxy creation:
 3. select security type
 	a. None/API Key/oauth
 4. virtual host
-	a. secure/default -> most select secure/default
+	a. secure/default -> most select secure
 5. Build
 	a. test/prod
 6. click on next.
