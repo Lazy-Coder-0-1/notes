@@ -1,0 +1,75 @@
+================================================================================
+Example 1:
+~~~~~~~~~~
+
+component 1:
+-----------
+import './App.css';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import New from './components/New';
+
+const intivalue = {
+  count: 0
+}
+
+const rootReducer = (state = intivalue, action) => {
+
+  switch (action.type) {
+    case 'INCREMENT':
+      return {
+        count: state.count + 1
+      }
+    case 'DECREMENT':
+      return {
+        count: state.count - 1
+      }
+    default: return state
+  }
+}
+const store = createStore(rootReducer);
+
+function App() {
+  return (
+    <Provider store={store}>
+      <New />
+    </Provider>
+  );
+}
+
+export default App;
+
+
+component 2:
+------------
+
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+class New extends Component {
+    render() {
+        return (
+            <div>
+                <h1>{this.props.ctr.count} </h1>
+                <button onClick={() => this.props.onIncrement()}>INCREMENT</button>
+            </div>
+        )
+    }
+}
+const mapStateToProps = state => {
+    return {
+        ctr: state
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        onIncrement: () => dispatch({ type: 'INCREMENT' }),
+        onDecrement: () => dispatch({ type: 'DECREMENT' })
+    }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(New)
+==========================================================================================
+Example 2:
+~~~~~~~~~~
