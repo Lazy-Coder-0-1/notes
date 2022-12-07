@@ -73,3 +73,16 @@ export default connect(mapStateToProps, mapDispatchToProps)(New)
 ==========================================================================================
 Example 2:
 ~~~~~~~~~~
+Another way of dispatching to store
+
+connect(mapStateToProps , increment , decrement) ( component)
+
+
+increment(){
+	dispatch({type :'INCREMENT'})
+}
+
+decrement(){
+	dispatch({type :'DECREMENT'})
+}
+=========================================================================================
